@@ -37,7 +37,7 @@ const projects = response.featuredProjects.edges;
             <Title title="featured" subtitle="projects" />
             <div className={styles.center}>
             {projects.map(({ node }) => {
-                return <Project key={node.contentful_id} tour={node}/>
+                return <Project key={node.contentful_id} project={node}/>
             })}
             </div>
             
