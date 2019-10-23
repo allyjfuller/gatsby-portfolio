@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
 import styles from '../css/template.module.css'
 import Img from 'gatsby-image'
-import {FaMoneyBillWave, FaMap} from 'react-icons/fa'
 import Info from '../components/SingleProject/Info'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
@@ -38,7 +37,7 @@ const Template = ({data}) => {
                     <h2>Info</h2>
                     <div className={styles.journey}>
                         {overview.map((item, index) => {
-                            return <Info key={index} info={item.title} item={item.info}/>
+                            return <Info key={index} title={item.title} info={item.info}/>
                         })}
                 </div>
                 <AniLink fade to="/projects" className="btn-primary">

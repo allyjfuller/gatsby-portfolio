@@ -1,16 +1,25 @@
 import React, {useState} from 'react'
-import {FaAngelDown} from 'react-icons/fa'
-import styles from '../../css/day.module.css'
+import { FaAngleDown } from 'react-icons/fa'
+import styles from "../../css/day.module.css"
 
 const Info = ({title, info}) => {
-    return <article className={styles.day}>
-        <h4>
+    const [showInfo, setInfo]= useState(false)
+    const toggleInfo = () => {
+    setInfo(showInfo => !showInfo)
+    }
+    return (
+        <article className={styles.day}>
+            <h4>
             {title}
-            <button className={styles.btn}>
-                <FaAngelDown />
+            <button className={styles.btn} onClick={toggleInfo}>
+                <FaAngleDown />
             </button>
-        </h4>
-    </article>
+            </h4>
+            {showInfo && <p>{info}</p>}
+
+        </article>
+
+    )
 }
 
 export default Info
