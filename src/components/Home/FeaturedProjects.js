@@ -16,7 +16,7 @@ query{
           }
           slug
           contentful_id
-          updated
+          updated(formatString:"MMMM YYYY")
           
           images{
             fluid{
