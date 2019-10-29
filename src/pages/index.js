@@ -13,8 +13,8 @@ export default ({data}) => (
 <Layout>
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
         <Banner title="Alexandra Fuller" info="Software Engineer">
-            <AniLink fade to="/projects/" className="btn-white">
-                My Work
+            <AniLink fade to="/contact/" className="btn-white">
+                Hire Me
             </AniLink>
         </Banner>
     </StyledHero>

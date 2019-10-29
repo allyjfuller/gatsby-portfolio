@@ -4,7 +4,7 @@ import styles from '../css/navbar.module.css'
 import { IoIosMenu } from 'react-icons/io'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
-import logo from '../images/logo.svg'
+
 
 const Navbar = () => {
     // if it was false, the moment I run toggleNav, state isOpen equals true 
@@ -19,7 +19,6 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navCenter}>
                 <div className={styles.navHeader}>
-                    <img src={logo} alt="logo" />
                     <button type="button" className={styles.logoBtn} onClick={toggleNav}>
                         <IoIosMenu className={styles.logoIcon} />
                     </button>
