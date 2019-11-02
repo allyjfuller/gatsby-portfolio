@@ -11,7 +11,7 @@ import FeaturedProjects from '../components/Home/FeaturedProjects'
 export default ({data}) => ( 
 
 <Layout>
-    <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
+    <StyledHero home="true" img={data.defaultBanner.childImageSharp.fluid}>
         <Banner title="Alexandra Fuller" info="Software Engineer">
             <AniLink fade to="/contact/" className="btn-white">
                 Hire Me
@@ -25,14 +25,13 @@ export default ({data}) => (
 )
 
 export const query = graphql`
-query {
-    defaultBcg: file(relativePath: { eq:
-        "defaultBcg.jpeg"}) {
-            childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
-                    ...GatsbyImageSharpFluid_withWebp
-            }
+query{
+    defaultBanner: file(relativePath: {eq: "defaultBanner.jpeg"}){
+      childImageSharp{
+        fluid(quality:90, maxWidth:4160){
+        ...GatsbyImageSharpFluid_withWebp
         }
+      }
     }
-}
+  }
 `
